@@ -55,4 +55,5 @@ class SimpleSwitch13(app_manager.RyuApp):
             src = link.src
             dst = link.src
             edges_list.append((src.dpid, dst.dpid, {'port': link.src.port_no}))
+        print(links)
 
