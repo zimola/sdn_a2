@@ -8,7 +8,7 @@ from mininet.node import Controller, RemoteController
 from mininet.cli import CLI
 
 
-class CompleteGraphTopo (Topo):
+class CompleteGraphTopo(Topo):
 
     def build(self, total_node=10):
         graph = nx.complete_graph(total_node)
@@ -32,7 +32,7 @@ class CompleteGraphTopo (Topo):
 
 
 def runner():
-    topo = CompleteGraphTopo( total_node=5)
+    topo = CompleteGraphTopo(total_node=10)
     c = RemoteController('c',  '127.0.0.1',  6633)
     net = Mininet(topo=topo, controller=c, host=CPULimitedHost, link=TCLink, autoSetMacs=True)
     net.start()
